@@ -13,7 +13,7 @@ description: Professional Geoscientist, Data Science Addict, Machine Learning En
 # URL of Image of the Site
 site-image: /WhatATheme/assets/images/meta.jpg
 # Keywords of the Site
-site-keywords: Site, Template, Theme
+site-keywords: Danylo Kolos, Danylo, Kolos, Geophysics, Geophysicist, Data Science, Data Scientist,Machine Learning
 # URL for the Image of custom Favicon
 favicon-url: 
 
@@ -21,7 +21,7 @@ favicon-url:
 #heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 #heroimage: assets/images/Mountains_IMG_0337.jpg
 #heroimage: assets/images/SamplePost.jpg
-heroimage: assets/images/pexels-photo-220444.jpg
+heroimage: https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Mountains_IMG_0337.jpg?raw=true.jpg
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
