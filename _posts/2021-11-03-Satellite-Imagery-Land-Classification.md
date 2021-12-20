@@ -1,7 +1,7 @@
 ---
 title: Satellite Imagery Land Classification 
 layout: post
-post-image: "https://raw.githubusercontent.com/thedevslot/WhatATheme/master/assets/images/SamplePost.png?token=AHMQUEPC4IFADOF5VG4QVN26Z64GG"
+post-image: "https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-KNN_SatelliteClassification_05.png?raw=true"
 description: Classifying land types from satellite imagery using Machine Learning.    
 tags:
 - Data Science
