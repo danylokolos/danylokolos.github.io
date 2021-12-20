@@ -1,5 +1,5 @@
 ---
-title: Hello World First Portfolio Post
+title: Hello World First Blog Post 
 layout: post
 post-image: "https://raw.githubusercontent.com/thedevslot/WhatATheme/master/assets/images/SamplePost.png?token=AHMQUEPC4IFADOF5VG4QVN26Z64GG"
 description: A sample post to see how Portfolio posts will look.
