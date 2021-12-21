@@ -36,8 +36,10 @@ The model was then used on the original data to predict land types across the en
 
 Results are displayed below. On the left a catural colour image is compared to the land use map generated using machine learning.
 
+**Images in the post will look like:**<br>
+![Raw Satellite Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Sentinel-2_L2A_True_color_2.png?h=306&w=500)
 
-
+![Classified Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-KNN_SatelliteClassification_05.png?raw=true)
 <br>
 <br>
 Stay tuned, as I finish this blog post soon...
