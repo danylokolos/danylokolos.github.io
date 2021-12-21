@@ -34,14 +34,20 @@ The model was then used on the original data to predict land types across the en
 
 # **Results**
 
-Results are displayed below. On the left a catural colour image is compared to the land use map generated using machine learning.
+Results are displayed below. On the left a natural colour image is compared to the land use map generated using machine learning.
 
 ![Raw Satellite Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Sentinel-2_L2A_True_color_2.png?raw=true)
 ![Classified Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-KNN_SatelliteClassification_05.png?raw=true)
 
-![Legend](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Legend.png?raw=true)
+![Legend](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Legend_1.png?raw=true)
 
-<br>
-<br>
-Stay tuned, as I finish this blog post soon...
+Lots of detail can be seen in the land use map, which might have been hidden at first glance in the original image, such as lakes, and small towns. The confusion matrix showed high levels of accuracy, confirming what we see by comparing the images. 
+
+# **Takeaways**
+
+* We managed to get a large area mapped and labeled by manually labeling less than 1% of the data and using machine learning to do the rest.
+* These techniques can be applied to other instances, not just image classification but to almost any dataset. 
+* Solution could be improved if we added more land class types. 
+
+
 
