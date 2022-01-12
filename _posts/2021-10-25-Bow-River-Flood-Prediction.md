@@ -1,8 +1,8 @@
 ---
 title: Bow River Flood Prediction 
 layout: post
-post-image: "https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project02-CalgaryFlood.jpg?raw=true"
-description: Predicting a flood on the Bow River using machine learning and multiple datasets.    
+post-image: "https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project02-CalgaryFlood.JPG?raw=true"
+description: Predicting a flood on the Bow River using machine learning and multiple open source datasets.    
 tags:
 - Data Science
 - Machine Learning
@@ -14,23 +14,25 @@ tags:
 
 # **Problem**
 
-Differentiating land types from imagery and storing it in a database can be a time consuming task. Although, a human can quickly recognize which areas are urban, farmland, forest, water, etc., converting that knowledge into a digital file will take considerable time. I realized this task could be accomplished much faster if I utilized some machine learning. 
+In 2013, the Bow River flooded causing extensive damage in the city of Calgary. The total cost of the flood has been assessed at approximately $5 billion. Much of the damage was to infrastructure and personal property. Forecasting a flood of this magnitude is a problem that needs to be solved. An accurate flood forecast could have allowed for mitigation procedures to have been initiated, and the extensive damage may have been partially reduced. 
+
 
 # **Methodology**
 
-To solve the problem at hand, I grabbed some data from an open source satellite imagery dataset: [https://www.sentinel-hub.com/explore/sentinelplayground/](https://www.sentinel-hub.com/explore/sentinelplayground/). If you've never played around with satellite imagery, the website provides lots of useful and interesting capabilities. Imagery is continuously updated, and the resolution is very good for a free resource. 
+To solve the problem, I researched wha comes causes flooding and which variables are important. Weather, temperature, rainfall, snowpack, soil saturation, and upstream water levels are all important factors that need to be studied. 
 
-Selecting an area around Calgary proved interesting, as many different land types could be visible. I made sure to download all 12 bands of data. Remote sensing data is often imaged in EM bands in the visible spectrum (ie. red, green, blue), as well as outside the visible spectrum (into infrared and also slightly towards ultraviolet).
+After researching available data, two open source data sets were found. They didn't contain all the variables that were identified, but the most important factors would were included. Both datasets came from government websites. 
 
-To use the data, I read it into Python and extracted pixel intensities across all 12 files. I performed some light filtering to smoothen the image by using a median filter on each 5 by 5 pixel area. This reduced the amount of noise visible in the dataset and would in the end improve my results. A CSV file containing coordinates and intensities for each EM band was saved.
+Water flow rates: [https://wateroffice.ec.gc.ca/mainmenu/historical_data_index_e.html](https://wateroffice.ec.gc.ca/mainmenu/historical_data_index_e.html) 
+From here, 17 water flow gauges in Calgary and upstream along the Bow River were extracted.
 
-Seven different land types were identified in a separate colour photo of the same area (urban, farmland, grassland, forest, water, snow, mountain/rock). Ten 20 by 20 pixel areas of each land type were identified. The pixel locations were stored in a manually generated file along with labels. This labeled data corresponded to approximately 0.73% of the total land that was covered in the satellite images. 
+Weather data: [https://climate.weather.gc.ca/historical_data/search_historic_data_e.html](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html) 
+From this, 2 weather stations, in Banff and Kananaskis, that could be important to predicting water flow rates. Items of interest included air temperature, and precipitation.
 
-A dataset was created merging the full dataset of pixel intensities and of the labeled locations. The 20x20 pixel labeled locations were split into 5x5 pixel locations, in order to have more labeled samples in the dataset. Data was split into a validationa nd test dataset. 
+Data was reformatted and combined. Seperate .csv files of individual stations were scraped for data within a ten year time span and transformed into a single tabular dataset. Into this dataset, weather data was inserted matching to the appropriate dates. Several data wrangling steps were applied, to correct for missing data (station not recording), faulty data (impossible values) and unreliable data (frozen sensors). 
 
-Multiple classification methods were tested, in the end a k-nearest neighbour apporach proved most accurate with k=3.
+After pre-processing, splitting, builing machine learning models, and evaluating those models, prediction results were obtained. 
 
-The model was then used on the original data to predict land types across the entire satellite image. 
 
 # **Results**
 
