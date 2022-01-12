@@ -45,7 +45,7 @@ Lots of detail can be seen in the land use map, which might have been hidden at 
 
 # **Takeaways**
 
-* We managed to get a large area mapped and labeled by manually labeling less than 1% of the data and using machine learning to do the rest.
+* Managed to get a large area mapped and labeled by manually labeling less than 1% of the data and using machine learning to do the rest.
 * These techniques can be applied to other instances, not just image classification but to almost any dataset. 
 * Solution could be improved if we added more land class types. 
 

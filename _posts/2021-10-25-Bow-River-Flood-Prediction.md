@@ -34,32 +34,20 @@ After pre-processing, splitting, builing machine learning models, and evaluating
 
 # **Results**
 
-The results of our best model predicted the flood of the Bow River in 2013. The actual daily flow rate on June 21, 2013 was 1750 m3/s. One day before the maximum flood, our model predicted 1672 m3/s and two days before the flood, 1638 m3/s. This corresponds to errors of 4.5% and 6.4%, respectively. 
+The results of the best model predicted the flood of the Bow River in 2013. The actual daily flow rate on June 21, 2013 was 1750 m3/s. One day before the maximum flood, the model predicted 1672 m3/s and two days before the flood, 1638 m3/s. This corresponds to errors of 4.5% and 6.4%, respectively. 
 
 The features which were most importance in the model corresponded to flow rates in the Bow River just below the Ghost Reservoir (feature importance 38%), and less so in the Kananaskis River (feature importance 11%) and Bow River near Cochrane (feature importance 11%). The second largest feature of importance was the precipitation amount in Kananaskis (feature importance 22%). All other features had less than 2% relevance each.
 
-As a bonus, our model also predicted flow rates for non-flood events. These could be used in for other purposes relating to water management. Mean absolute error predicting one day in advance was 7.6 m3/s and two days in advance 10.8 m3/s. From the figures below, one can see the errors increased as the flow rates in the river were higher. Predicting 2 days in advance had more scatter in the predictions, resulting in less accuracy. 
+As a bonus, the model also predicted flow rates for non-flood events. These could be used in for other purposes relating to water management. Mean absolute error predicting one day in advance was 7.6 m3/s and two days in advance 10.8 m3/s. From the figures below, one can see the errors increased as the flow rates in the river were higher. Predicting 2 days in advance had more scatter in the predictions, resulting in less accuracy. 
 
-![Prediction Lag 1 Day](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project02-PredictionLag1Day.png?raw=true)
-![Prediction Lag 2 Day](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project02-PredictionLag2Day.png?raw=true)
+![Prediction Lag 1 Day](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project02-PredictionLag_1_2_Days.png?raw=true)
 
-
-
-
-Results are displayed below. On the left a natural colour image is compared to the land use map generated using machine learning.
-
-![Raw Satellite Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Sentinel-2_L2A_True_color_2.png?raw=true)
-![Classified Image](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-KNN_SatelliteClassification_05.png?raw=true)
-
-![Legend](https://github.com/danylokolos/danylokolos.github.io/blob/main/assets/images/Project01-Legend_1.png?raw=true)
-
-Lots of detail can be seen in the land use map, which might have been hidden at first glance in the original image, such as lakes, and small towns. The confusion matrix showed high levels of accuracy, confirming what we see by comparing the images. 
 
 # **Takeaways**
 
-* We managed to get a large area mapped and labeled by manually labeling less than 1% of the data and using machine learning to do the rest.
-* These techniques can be applied to other instances, not just image classification but to almost any dataset. 
-* Solution could be improved if we added more land class types. 
+* Identified a large source of historical data online. Government websites are an excellent resource. 
+* Retrieving, organizing and reformatting data is a time consuming task.  
+* Predicting anomalous events accurately, such as the flood, is a difficult task. The 2013 flood was highly correlated with a large rain event in Kananaksis. A future flood event, may have high correlation with a rain event in Banff, which our model would not accurately capture and thus predict. One option, could have been to add total precipitation from all weather stations upstream from Calgary together, to get a single value to reduce number of features. More data from flood events could help strengthen the model. 
 
 
 
