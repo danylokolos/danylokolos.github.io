@@ -9,6 +9,19 @@
                 {{ post.description | truncate: 300 | strip_html | strip_newlines | strip | escape }}
                 <hr class="has-background-grey">
                 <span class="has-text-grey"><span class="has-text-weight-semibold">{{ post.date | date: "%-B %d, %Y" }}</span></span>
+                <!-- Tags -->
+                {%- assign tags = post.tags -%}
+                {%- unless tags.size == 0 -%}
+                <p class="subtitle is-5 is-uppercase">
+                  <i class="fas fa-tags"></i>
+                  {% assign i = 0 %}
+                  {% for tags in post.tags %}
+                  <span class="tag is-link">{{post.tags[i]}}</span>
+                  {% assign i = i | plus:1 %}
+                  {% endfor %}
+                </p>
+                {%- endunless -%}
+                <!-- End of Tags -->
             </div>
         </div>
     </a>
